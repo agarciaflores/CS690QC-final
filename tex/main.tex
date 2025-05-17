@@ -1,0 +1,104 @@
+\documentclass[openany]{book}
+
+\usepackage{amscd}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{verbatim}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\geometry{letterpaper}
+\usepackage[pdftex]{graphicx}
+\usepackage{setspace}
+\usepackage{physics}
+\usepackage{subcaption}
+\usepackage[numbers]{natbib}
+\usepackage{pdfpages}
+\usepackage{bm}
+\usepackage{wrapfig}
+\usepackage{color}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{float}
+\usepackage{cancel}
+\usepackage{hyperref}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{nicefrac}
+\usepackage[most]{tcolorbox}
+\usepackage{listings}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue,
+    filecolor=magenta,      
+    urlcolor=cyan,
+    pdftitle={Overleaf Example},
+    pdfpagemode=FullScreen,
+    }
+
+\definecolor{mygreen}{RGB}{77, 175, 74}
+\definecolor{myblue}{RGB}{55, 126, 184}
+\definecolor{mypurple}{RGB}{152, 78, 163}
+\definecolor{myred}{RGB}{228, 26, 28}
+
+\usepackage{pgf, tikz}
+% \usetikzlibrary{backgrounds,fit,decorations.pathreplacing}  % TikZ libraries
+% \usetikzlibrary{positioning,matrix,arrows}
+\usepackage{tikz-cd}
+
+\usepackage{titlesec}             % for easy spacing control
+  \titlespacing*{\chapter}{0pt}{0pt}{20pt}
+\usepackage{etoolbox}             % to kill the page‐break
+\makeatletter
+  \patchcmd{\chapter}
+    {\if@openright\cleardoublepage\else\clearpage\fi}
+    {}{}{}
+\makeatother
+
+
+
+%%% SET LENTGH AND WIDTH %%%
+\setlength{\textwidth}{6.5in}
+\setlength{\textheight}{8.5in}
+\setlength{\oddsidemargin}{0pt}
+\setlength{\evensidemargin}{0pt}
+\setlength{\topmargin}{0pt}
+\setlength{\marginparsep}{0pt}
+\setlength{\marginparwidth}{1in}
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\vspace*{2cm}
+
+{\huge Exploring Satellite-Based Quantum Networks}
+
+\vspace{2cm}
+
+{\large by\\Agustin Garcia Flores}
+
+\vspace{2cm}
+
+{CS690QC: Quantum Communication\\ Gayane Vardoyan}
+
+\vfill
+
+\vspace*{3cm}
+
+UNIVERSITY OF MASSACHUSETTS AMHERST\\
+Amherst, Massachusetts\\
+\today
+\end{center}
+\end{titlepage}
+
+\tableofcontents
+\newpage
+
+\input{chapters/0-introduction.tex}
+\input{chapters/1-results.tex}
+
+\bibliographystyle{apsrev}
+\bibliography{bibliography.bib}
+
+\end{document}
